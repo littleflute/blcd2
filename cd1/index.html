@@ -1,0 +1,82 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp1.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/ted1/edit/master/docs/61/mp4i.bat">v1.3. 112 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp" style="float:right;">+blApp</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<div id="DivButtons"> 				
+<div id="DivButtons"> 				
+<button onclick="play('Babyface   If.mp3')">1:Babyface   If.mp3</button> 
+<button onclick="play('Barbra Streisand   A Child Is Born.mp3')">2:Barbra Streisand   A Child Is Born.mp3</button> 
+<button onclick="play('Bette Midler   Blueberry Pie.mp3')">3:Bette Midler   Blueberry Pie.mp3</button> 
+<button onclick="play('Bob Dylan   This Old Man.mp3')">4:Bob Dylan   This Old Man.mp3</button> 
+<button onclick="play('Brian Wilson   Country Feelin's.mp3')">5:Brian Wilson   Country Feelin's.mp3</button> 
+<button onclick="play('Bruce Springsteen   Chicken Lips and Lizard Hips.mp3')">6:Bruce Springsteen   Chicken Lips and Lizard Hips.mp3</button> 
+<button onclick="play('Carly Simon, James Taylor   Mockingbird.mp3')">7:Carly Simon, James Taylor   Mockingbird.mp3</button> 
+<button onclick="play('Carole King   Child Of Mine.mp3')">8:Carole King   Child Of Mine.mp3</button> 
+<button onclick="play('Cher   A Dream Is A Wish Your Heart Makes.mp3')">9:Cher   A Dream Is A Wish Your Heart Makes.mp3</button> 
+<button onclick="play('Faith Hill   Over The Rainbow.mp3')">10:Faith Hill   Over The Rainbow.mp3</button> 
+<br> 
+<button onclick="play('Harry Nilsson   Blanket For A Sail.mp3')">11:Harry Nilsson   Blanket For A Sail.mp3</button> 
+<button onclick="play('Jackson Browne, Jennifer Warnes   Golden Slumbers.mp3')">12:Jackson Browne, Jennifer Warnes   Golden Slumbers.mp3</button> 
+<button onclick="play('Little Richard   Itsy Bitsy Spider.mp3')">13:Little Richard   Itsy Bitsy Spider.mp3</button> 
+<button onclick="play('Luther Vandross   If I Had A Hammer.mp3')">14:Luther Vandross   If I Had A Hammer.mp3</button> 
+<button onclick="play('Natalie Merchant   Come Take A Trip In My Airship.mp3')">15:Natalie Merchant   Come Take A Trip In My Airship.mp3</button> 
+<button onclick="play('Seal   Puff (The Magic Dragon).mp3')">16:Seal   Puff (The Magic Dragon).mp3</button> 
+<button onclick="play('Sting   Cushie Butterfield.mp3')">17:Sting   Cushie Butterfield.mp3</button> 
+<button onclick="play('Ziggy Marley & The Melody Makers   Give A Little Love.mp3')">18:Ziggy Marley & The Melody Makers   Give A Little Love.mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var s = '::<div id="id_4_plxTool"> </div>';				
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMD( "id_mdiv_4_myVideo" , s , 300,100,720,480,blColor[1]); 	
+  md4v.v = blo0.blDiv(md4v, md4v.id+"v" , str4V , blGrey[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var btnPlx = blo0.blBtn(bl$("id_4_plxTool"),"id_btn_Plx","+plx",blGrey[0]);  
+btnPlx.onclick = function() { 
+  if(btnPlx.Load){													
+ 	if(btnPlx.n){}													
+ 	else{btnPlx.n=true;_on_off_div(this,bl$("id_mdiv_plx"));}		
+   _on_off_div(this,bl$("id_mdiv_plx"));  							
+  }																
+  else  { blo0.blScript ("id_script_plx","plx.js"); btnPlx.Load=true;	}
+}   
+</script> 
+</body> 
